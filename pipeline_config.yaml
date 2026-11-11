@@ -85,3 +85,9 @@ WINNER:
 INFERENCE:
   PIPELINE_PATH: models/inference_pipeline.joblib
   PREDICTIONS_PATH: data/processed/predictions.csv
+MLFLOW:
+  TRACKING_DB: mlflow.db
+  ARTIFACTS_DIR: mlartifacts
+  TRAINING_EXPERIMENT: house-pricing-entrenamiento
+  INFERENCE_EXPERIMENT: house-pricing-inferencia
+  REGISTERED_MODEL: house-pricing

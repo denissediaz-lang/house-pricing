@@ -4,6 +4,11 @@
 # Trained models
 /models/*.joblib
 
+# MLflow tracking and registry
+/mlflow.db
+/mlartifacts/
+/mlruns/
+
 # Mac OS-specific storage files
 .DS_Store
 
