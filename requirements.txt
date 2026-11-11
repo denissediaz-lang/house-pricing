@@ -8,6 +8,8 @@ scikit-learn
 feature-engine
 seaborn
 statsmodels
+mlflow
+skops
 ruff
 pytest
 python-dotenv
