@@ -1,0 +1,87 @@
+TARGET: SalePrice
+DATA:
+  RAW_DIR: data/raw
+  TRAIN_FILE: train.csv
+  TEST_FILE: test.csv
+FEATURES:
+  CONTINUAS:
+  - GrLivArea
+  - GarageArea
+  - TotalBsmtSF
+  - 1stFlrSF
+  - YearBuilt
+  - YearRemodAdd
+  - GarageYrBlt
+  - MasVnrArea
+  - BsmtFinSF1
+  - LotFrontage
+  DISCRETAS:
+  - OverallQual
+  - GarageCars
+  - FullBath
+  - TotRmsAbvGrd
+  - MSSubClass
+  - Fireplaces
+  - OverallCond
+  - HalfBath
+  - BedroomAbvGr
+  - BsmtFullBath
+  CATEGORICAS:
+  - Neighborhood
+  - ExterQual
+  - BsmtQual
+  - KitchenQual
+  - GarageFinish
+  - FireplaceQu
+  - Foundation
+  - GarageType
+  - BsmtFinType1
+  - HeatingQC
+MODEL_FEATURES:
+- GrLivArea
+- GarageArea
+- TotalBsmtSF
+- 1stFlrSF
+- YearBuilt
+- YearRemodAdd
+- GarageYrBlt
+- MasVnrArea
+- BsmtFinSF1
+- LotFrontage
+- OverallQual
+- GarageCars
+- FullBath
+- TotRmsAbvGrd
+- MSSubClass
+- Fireplaces
+- OverallCond
+- HalfBath
+- BedroomAbvGr
+- BsmtFullBath
+- Neighborhood
+- ExterQual
+- BsmtQual
+- KitchenQual
+- GarageFinish
+- FireplaceQu
+- Foundation
+- GarageType
+- BsmtFinType1
+- HeatingQC
+SPLIT:
+  TEST_SIZE: 0.2
+  RANDOM_STATE: 42
+TARGET_TRANSFORM: log1p
+PROCESSED:
+  DIR: data/processed
+  TRAIN_FILE: train_processed.csv
+  VALID_FILE: valid_processed.csv
+  TEST_FILE: test_processed.csv
+PIPELINE_PATH: models/preprocessing_pipeline.joblib
+WINNER:
+  NAME: GradientBoosting
+  MODEL_PATH: models/winner_model.joblib
+  RMSE_REAL: 26686.838732964072
+INFERENCE:
+  PIPELINE_PATH: models/inference_pipeline.joblib
+  PREDICTIONS_PATH: data/processed/predictions.csv

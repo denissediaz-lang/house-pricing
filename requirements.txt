@@ -1,0 +1,16 @@
+ipython
+jupyterlab
+matplotlib
+notebook
+numpy
+pandas
+scikit-learn
+feature-engine
+seaborn
+statsmodels
+ruff
+pytest
+python-dotenv
+pyyaml
+mkdocs
+-e .
